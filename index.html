@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="#" class="brand">MySite</a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        ☰
+      </button>
+      <nav class="nav-links" id="main-menu" data-open="false">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Hello Team</h1>
+      <p>Welcome to our awesome landing page 🚀🔥</p>
+    </main>
+
+    <footer>All rights reserved &copy; 2025</footer>
+
+    <script>
+      const btn = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav-links");
+      btn.addEventListener("click", () => {
+        const open = nav.getAttribute("data-open") === "true";
+        nav.setAttribute("data-open", String(!open));
+        btn.setAttribute("aria-expanded", String(!open));
+      });
+    </script>
+  </body>
+</html>
